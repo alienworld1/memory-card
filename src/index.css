@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Lato, system-ui, sans-serif;
+  background: rgb(124,58,237);
+  background: linear-gradient(180deg, rgba(124,58,237,1) 0%, rgba(37,99,235,1) 100%);
+}
+
+header {
+  display: flex;
+  color: #fafafa;
+  align-items: center;
+  padding: 24px;
+  gap: 32px;
+}
+
+header > img {
+  width: 3rem;
+}
