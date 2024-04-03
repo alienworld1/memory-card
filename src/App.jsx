@@ -8,12 +8,12 @@ export default function App() {
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
-    fetchCats(10)
+    fetchCats(30)
       .then(response => {
         setCats(response);
       })
       .catch(error => {
-        console.error(error);
+        alert(error);
       });
   }, []);
 
