@@ -1,4 +1,5 @@
 import { getImageUrl } from "../api/cat";
+import '../styles/Card.css';
 
 export default function Card({cat}) {
   const imageUrl = getImageUrl(cat._id);

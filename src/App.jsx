@@ -8,7 +8,7 @@ export default function App() {
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
-    fetchCats(30)
+    fetchCats(10)
       .then(response => {
         setCats(response);
       })
