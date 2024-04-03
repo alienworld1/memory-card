@@ -1,6 +1,6 @@
 # Memory Card
 
-A memory game made using React.
+A memory game made using React. Check it out here: [Memory Card](https://mem0ry-cards.netlify.app/)
 
 - Cards with pictures of cats are displayed on the screen
 - Clicking a card will load a new set of cards
