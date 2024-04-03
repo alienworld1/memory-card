@@ -1,21 +1,10 @@
 import Brain from './assets/brain-svgrepo-com.svg';
-import Card from './components/Card';
+import CardContainer from './components/CardContainer';
+import { useState } from 'react';
+import { getRandomElements } from './helpers';
 
-import { useState, useEffect } from 'react';
-import { fetchCats } from './api/cat';
-
-export default function App() {
-  const [cats, setCats] = useState([]);
-
-  useEffect(() => {
-    fetchCats(10)
-      .then(response => {
-        setCats(response);
-      })
-      .catch(error => {
-        alert(error);
-      });
-  }, []);
+export default function App({catList}) {
+  const [activeCats, setActiveCats] = useState(getRandomElements(catList, 10));
 
   return (
     <>
@@ -24,9 +13,7 @@ export default function App() {
         <h1>Memory Cards</h1>
       </header>
       <main>
-        {cats.map(cat => (
-          <Card key={cat._id} cat = {cat}/>
-        ))}
+        <CardContainer cats={activeCats} />
       </main>
     </>
   )

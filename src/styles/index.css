@@ -25,11 +25,3 @@ header {
 header > img {
   width: 3rem;
 }
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  padding: 16px;
-}
