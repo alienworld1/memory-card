@@ -6,6 +6,10 @@ import { getRandomElements } from './helpers';
 export default function App({catList}) {
   const [activeCats, setActiveCats] = useState(getRandomElements(catList, 10));
 
+  const handleClick = () => {
+    setActiveCats(getRandomElements(catList, 10));
+  }
+
   return (
     <>
       <header>
@@ -13,7 +17,7 @@ export default function App({catList}) {
         <h1>Memory Cards</h1>
       </header>
       <main>
-        <CardContainer cats={activeCats} />
+        <CardContainer cats={activeCats} handleClick={handleClick}/>
       </main>
     </>
   )
